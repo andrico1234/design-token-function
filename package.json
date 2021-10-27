@@ -4,15 +4,17 @@
   "description": "A simple Node app built on fastify, instantly up and running.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "dependencies": {
+    "@octokit/rest": "^18.12.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
     "express": "4.17.1",
-    "@octokit/core": "^3.5.1",
-    "body-parser": "^1.19.0"
+    "nodemon": "^2.0.14"
   },
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/glitch-hello-node"
