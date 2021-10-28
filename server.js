@@ -36,7 +36,10 @@ app.post("/commit-tokens", async (req, res) => {
   }
 
   const tokens = JSON.parse(req.body).client_payload.tokens;
-  const buffer = Buffer.from(JSON.stringify(tokens));
+  // done to minify the output
+  const parsedTokens = JSON.parse(tokens);
+
+  const buffer = Buffer.from(JSON.stringify(parsedTokens));
   const content = buffer.toString("base64");
 
   try {
